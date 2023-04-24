@@ -68,6 +68,24 @@
             {
                 Console.WriteLine("Отрезки не параллельны.");
             }
+
+            Console.WriteLine();
+
+            Segment3D segment7 = new Segment3D(new Vector3D(20, 20, -30), new Vector3D(0.00, 0.0, 0.0));
+            Segment3D segment8 = new Segment3D(new Vector3D(5.5, 0, 10.9), new Vector3D(0.0, 0.0, 0.0));
+
+            Console.WriteLine($"Отрезок 1: {segment7} и отрезок 2: {segment8}");
+
+            Vector3D? vector3 = GetIntersectionVector(segment7, segment8);
+
+            if (vector3 == null)
+            {
+                Console.WriteLine("Отрезки не пересекаются.");
+            }
+            else
+            {
+                Console.WriteLine($"Отрезки пересекаются в точке: {vector3}");
+            }
         }
     }
 }

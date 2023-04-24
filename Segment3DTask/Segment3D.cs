@@ -100,7 +100,7 @@ namespace Segment3DTask
 
             var parameter1 = (segment.Start.X - Start.X + directionVectorX2 * parameter2) / directionVectorX1;
 
-            if (parameter1 < Epsilon || parameter1 > 1.0 || parameter2 < Epsilon || parameter2 > 1.0)
+            if (parameter1 < 0 || parameter1 > 1 || parameter2 < 0 || parameter2 > 1)
             {
                 intersectionVector3D = null;
 
